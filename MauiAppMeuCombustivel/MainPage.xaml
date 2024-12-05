@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?> <!-- Declaração do tipo e codificação do arquivo XML --><!-- Namespace para MAUI --><!-- Namespace para XAML -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppMeuCombustivel.MainPage"> <!-- Define a classe da página como MainPage -->
+
+    <ScrollView> <!-- Permite que o conteúdo da página seja rolável --><!-- Layout que empilha os elementos verticalmente --><!-- Espaçamento interno: 30px em cima e embaixo, 0px nas laterais -->
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"> <!-- Espaço entre os elementos -->
+
+            <!-- Fonte da imagem exibida --><!-- Fonte da imagem exibida --><!-- Ajusta a imagem para caber no espaço disponível -->
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" /> <!--
+            Descrição semântica da imagem para acessibilidade -->
+
+            <Label Text="Preço do Etanol:" /> <!-- Rótulo para o campo do preço do etanol -->
+            <Entry x:Name="txt_etanol" Placeholder="R$ " /> <!-- Campo de entrada para o preço do
+            etanol -->
+
+            <Label Text="Preço da Gasolina:" /> <!-- Rótulo para o campo do preço da gasolina -->
+            <Entry x:Name="txt_gasolina" Placeholder="R$ " /> <!-- Campo de entrada para o preço da
+            gasolina -->
+
+            <Button Text="Qual compensa mais?" Clicked="Button_Clicked" /> <!-- Botão que, ao ser
+            clicado, chama o método Button_Clicked -->
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
